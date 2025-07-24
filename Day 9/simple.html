@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: 40px auto;
+      border: 2px solid blue;
+      background: lightblue;
+    }
+    .box {
+      width: 120px;
+      height: 120px;
+      color: whitesmoke;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .static {
+      background: greenyellow;
+      position: static;
+      top: 0; left: 0;
+    }
+    .relative {
+      background: orangered;
+      position: relative;
+      top: 40px;
+      left: 40px;
+    }
+    .absolute {
+      background: blueviolet;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .fixed {
+      background: pink;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box relative">Relative</div>
+    <div class="box absolute">Absolute</div>
+  </div>
+  <div class="box fixed">Fixed</div>
+</body>
+</html>
